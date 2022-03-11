@@ -21,7 +21,7 @@
               <key>url</key>
               <string>https://highside.io/download/</string>
               <key>result_output_var_name</key>
-              <string>https://highside.io/+url_to_download</string>
+              <string>url_to_download</string>
               <key>re_pattern</key>
               <string>href="(/download/.*dmg*)"</string>
             </dict>
@@ -29,6 +29,8 @@
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
+            <key>url</key>
+            <string>url_to_download</string>
         </dict>
         <dict>
             <key>Processor</key>
