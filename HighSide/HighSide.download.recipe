@@ -23,29 +23,26 @@
               <key>result_output_var_name</key>
               <string>url_to_download</string>
               <key>re_pattern</key>
-              <string>value="(https://highside\.io/download/.*dmg*)"</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLRedirect</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%url_to_download%</string>
-                <key>redirect_url</key>
-                <string>final_url</string>
+              <string>href="(/download/.*dmg*)"</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
             <key>Arguments</key>
             <dict>
-                <key>url</key>
-                <string>%redirect_url%</string>
-                <key>filename</key>
-                <string>HighSide.dmg</string>
+                <key>input_path</key>
+                <string>%pathname%/HighSide.app</string>
+                <key>requirement</key>
+                <string>identifier "com.highside.client" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "AT8JR87667"</string>
             </dict>
         </dict>
     </array>
