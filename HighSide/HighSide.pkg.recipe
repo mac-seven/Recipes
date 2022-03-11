@@ -10,45 +10,18 @@
     <dict>
         <key>NAME</key>
         <string>HighSide</string>
-         <key>LANGUAGE</key>
-        <string>en</string>      
-        <!--This will set the lanugaue for Ekahau Pro to avoid one ofthe two PPPC prompts --> 
-        <!--Acceptable values for this are: -->
-        <!--"en" for English -->
-        <!--"fr" for French / Française -->
-        <!--"de" for German / Deutsche -->
-        <!--"ja" for Japanese / 日本人-->
     </dict>
-    <key>MinimumVersion</key>
-    <string>0.6.1</string>
     <key>ParentRecipe</key>
     <string>com.github.Mac-Seven.download.HighSide</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Processor</key>
-            <string>com.github.homebysix.VersionSplitter/VersionSplitter</string>
+            <string>AppDmgVersioner</string>
             <key>Arguments</key>
             <dict>
-                <key>version</key>
-                <string>%url%</string>
-                <key>index</key>
-                <integer>1</integer>
-                <key>split_on</key>
-                <string>-</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>com.github.homebysix.VersionSplitter/VersionSplitter</string>
-            <key>Arguments</key>
-            <dict>
-                <key>version</key>
-                <string>%version%</string>
-                <key>index</key>
-                <integer>0</integer>
-                <key>split_on</key>
-                <string>.dmg</string>
+                <key>dmg_path</key>
+                <string>%pathname%</string>
             </dict>
         </dict>
         <dict>
@@ -62,47 +35,18 @@
                 <dict>
                     <key>Applications</key>
                     <string>0775</string>
-                    <key>Scripts</key>
-                    <string>0775</string>
                 </dict>
             </dict>
         </dict>
-         <dict>
-            <key>Processor</key>
-            <string>FileMover</string>
-            <key>Arguments</key>
-            <dict>
-               <key>source</key>
-               <string>%RECIPE_CACHE_DIR%/%NAME%/Scripts</string>
-               <key>target</key>
-               <string>%RECIPE_CACHE_DIR%/Scripts</string>
-            </dict>
-         </dict>
         <dict>
             <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/HighSide.app</string>
+                <string>%pathname%/%app_name%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/HighSide.app</string>
-                <key>overwrite</key>
-                <true/>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PlistReader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>info_path</key>
-                <string>%destination_path%</string>
-                <key>plist_keys</key>
-                <dict>
-                    <key>CFBundleIdentifier</key>
-                    <string>bundleid</string>
-                </dict>
+                <string>%pkgroot%/Applications/%app_name%</string>
             </dict>
         </dict>
         <dict>
@@ -114,6 +58,12 @@
                 <dict>
                     <key>pkgname</key>
                     <string>%NAME%-%version%</string>
+                    <key>version</key>
+                    <string>%version%</string>
+                    <key>id</key>
+                    <string>%bundleid%</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
                     <key>chown</key>
                     <array>
                         <dict>
@@ -125,16 +75,6 @@
                             <string>admin</string>
                         </dict>
                     </array>
-                    <key>id</key>
-                    <string>%bundleid%</string>
-                    <key>options</key>
-                    <string>purge_ds_store</string>
-                    <key>pkgdir</key>
-                    <string>%RECIPE_CACHE_DIR%</string>
-                    <key>pkgroot</key>
-                    <string>%pkgroot%</string>
-                    <key>version</key>
-                    <string>%version%</string>
                 </dict>
             </dict>
         </dict>
