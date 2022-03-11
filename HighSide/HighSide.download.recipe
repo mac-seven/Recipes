@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>HighSide</string>
         <key>SEARCH_URL</key>
-        <string>https://highside.io/download</string>
+        <string>https://highside.io/download/HighSide%20Setup.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
