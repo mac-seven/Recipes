@@ -23,7 +23,7 @@
               <key>result_output_var_name</key>
               <string>url_to_download</string>
               <key>re_pattern</key>
-              <string>href="(/download/.*dmg*)"</string>
+              <string>href="(https://highside.io/download/.*dmg*)"</string>
             </dict>
         </dict>
         <dict>
