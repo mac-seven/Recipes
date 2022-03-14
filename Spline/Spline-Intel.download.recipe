@@ -13,7 +13,7 @@
         <key>SEARCH_URL</key>
         <string>https://spline.design/&num;download</string>
         <key>SEARCH_PATTERN</key>
-        <string>https://cdn.spline.design/_assets/Spline-[\S]+\-arm64.osx_update.zip</string>
+        <string>https://cdn.spline.design/_assets/Spline-[\S]+\-x64.osx_update.zip</string>
     </dict>
     <key>Process</key>
     <array>
