@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download recipe for the latest free version of CCLeaner.</string>
+    <string>Download recipe for the latest free version of Cisco Webex for Apple silicon (ARM64) devices running macOS.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.download.CCleaner</string>
+    <string>com.github.Mac-Seven.download.CiscoWebex-arm64</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>CCleaner</string>
+        <string>Cisco Webex</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://www.ccleaner.com/go/get_ccmac</string>
+        <string>https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg</string>
     </dict>
     <key>Process</key>
     <array>
