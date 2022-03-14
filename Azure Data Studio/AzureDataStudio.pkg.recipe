@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
                 <key>pkgdirs</key>
                 <dict>
                     <key>Applications</key>
@@ -35,9 +35,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/%app_name%</string>
+                <string>%pathname%/%NAME%.app</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/%app_name%</string>
+                <string>%pkgroot%/Applications/%NAME%.app</string>
             </dict>
         </dict>
         <dict>
