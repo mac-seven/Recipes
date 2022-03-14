@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>This recipe downloadsthe latest version of Spline for Intel devices</string>
+    <string>This recipe downloadsthe latest version of Spline for ARM devices</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.download.Spline-Intel</string>
+    <string>com.github.Mac-Seven.download.Spline-ARM</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
