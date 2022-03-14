@@ -10,7 +10,7 @@
 	<dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.Mac-Seven.download.Spline-Intel</string>
+	<string>com.github.Mac-Seven.download.Spline</string>
 	<key>Process</key>
 	<array>
         <dict>
