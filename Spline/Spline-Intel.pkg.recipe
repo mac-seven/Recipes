@@ -3,46 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads VueScan and then creates an installer package with the app and the needed authorization file.
-This recipe requires the hansen-m-recipes (Matt Hansen) repo.
-
-The recipe requires the authorization file created by VueScan for your licence.
-The suggested way to do this is to install VueScan on the Mac/VM running AutoPkg and use the recipe's
-default value for RC_FILE. Alternately, you can create a text file made up of the following four lines
-(where you replace # with the values for your license):
-
-[VueScan]
-SerialNumber=#
-CustomerNumber=#
-EmailAddress=#@#.#
-
-Then, save that file in a locally-accessible location and set the RC_FILE input variable to
-the path to that file (including the file name with extension). AutoPkg will do the rest.</string>
+	<string>Downloads the current Apple Enterprise Connect installer, extracts version information and renames the installer package.</string>
 	<key>Identifier</key>
-	<string>com.github.jazzace.pkg.VueScanLicenced</string>
+	<string>com.github.Mac-Seven.pkg.Spline-Intel</string>
 	<key>Input</key>
 	<dict>
-		<key>PKG_ID</key>
-		<string>com.yourorg.vuescanlicenced.pkg</string>
-		<key>RC_FILE</key>
-		<string>/Users/Shared/.vuescanrc</string>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.VueScan</string>
+	<string>com.github.Mac-Seven.download.Spline-Intel</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-		</dict>
-		<dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unzip</string>
+                <key>purge_destination</key>
+                <false/>
+            </dict>
+        </dict>
+        <dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 			<key>Arguments</key>
@@ -51,10 +35,6 @@ the path to that file (including the file name with extension). AutoPkg will do 
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>Users</key>
-					<string>0755</string>
-					<key>Users/Shared</key>
-					<string>1777</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
@@ -66,20 +46,9 @@ the path to that file (including the file name with extension). AutoPkg will do 
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/VueScan.app</string>
+				<string>%pkgroot%/Applications/Spline.app</string>
 				<key>source_path</key>
-				<string>%pathname%/*.app</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Copier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Users/Shared/.vuescanrc</string>
-				<key>source_path</key>
-				<string>%RC_FILE%</string>
+				<string>%RECIPE_CACHE_DIR%/unzip/*.app</string>
 			</dict>
 		</dict>
 		<dict>
@@ -96,22 +65,6 @@ the path to that file (including the file name with extension). AutoPkg will do 
 							<string>admin</string>
 							<key>path</key>
 							<string>Applications</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
-						<dict>
-							<key>group</key>
-							<string>admin</string>
-							<key>path</key>
-							<string>Users</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
-						<dict>
-							<key>group</key>
-							<string>wheel</string>
-							<key>path</key>
-							<string>Users/Shared</string>
 							<key>user</key>
 							<string>root</string>
 						</dict>
