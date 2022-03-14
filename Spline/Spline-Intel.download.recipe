@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Spline</string>
         <key>SEARCH_URL</key>
-        <string>https://spline.design/download</string>
+        <string>https://spline.design/#download</string>
         <key>SEARCH_PATTERN</key>
         <string>https://cdn.spline.design/_assets/Spline-[\S]+\-x64.osx_update.zip</string>
     </dict>
