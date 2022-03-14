@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>This recipe downloadsthe latest version of Spline for Intel devices</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.download.Spline-Intel</string>
+    <string>com.github.Mac-Seven.download.Spline</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
