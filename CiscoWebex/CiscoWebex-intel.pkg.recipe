@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads the latest version of Cisco Webex for Intel macOS devices and turns it into a package.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.pkg.CiscoWebex-Intel</string>
+    <string>com.github.Mac-Seven.pkg.CiscoWebEx-Intel</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>CCleaner</string>
+        <string>Cisco Webex</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.Mac-Seven.download.CiscoWebex-Intel</string>
@@ -26,13 +26,27 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/%pkg_name%</string>
+                <string>%pathname%/%app_name%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/%pkg_name%</string>
+                <string>%pkgroot%/Applications/%app_name%</string>
             </dict>
         </dict>
         <dict>
