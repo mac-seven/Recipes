@@ -56,10 +56,10 @@
             <dict>
                 <key>pkg_request</key>
                 <dict>
-                    <key>pkgname</key>
-                    <string>%NAME%-%version%</string>
                     <key>version</key>
                     <string>%version%</string>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
                     <key>id</key>
                     <string>%bundleid%</string>
                     <key>options</key>
