@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>This recipe downloadsthe latest version of Spline for Intel devices</string>
+    <key>Identifier</key>
+    <string>com.github.Mac-Seven.download.Spline_arm64</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Spline</string>
+        <key>SEARCH_URL</key>
+        <string>https://spline.design/#download</string>
+        <key>SEARCH_PATTERN</key>
+        <string>https://cdn.spline.design/_assets/Spline-[\S]+\-arm64.osx_update.zip</string>
+    </dict>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%SEARCH_URL%</string>
+                <key>re_pattern</key>
+                <string>%SEARCH_PATTERN%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%match%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%pathname%/Spline.app/Contents/Info.plist</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
