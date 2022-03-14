@@ -22,10 +22,6 @@
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>Users</key>
-					<string>0755</string>
-					<key>Users/Shared</key>
-					<string>1777</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
@@ -39,7 +35,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/Spline.app</string>
 				<key>source_path</key>
-				<string>%pathname%/*.app</string>
+				<string>%RECIPE_CACHE_DIR%/*.app</string>
 			</dict>
 		</dict>
 		<dict>
@@ -56,22 +52,6 @@
 							<string>admin</string>
 							<key>path</key>
 							<string>Applications</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
-						<dict>
-							<key>group</key>
-							<string>admin</string>
-							<key>path</key>
-							<string>Users</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
-						<dict>
-							<key>group</key>
-							<string>wheel</string>
-							<key>path</key>
-							<string>Users/Shared</string>
 							<key>user</key>
 							<string>root</string>
 						</dict>
