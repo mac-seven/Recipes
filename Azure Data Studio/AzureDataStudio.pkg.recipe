@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Azure Data Studio for Mac and turns it into a package.
-    This uses the download recipe from: com.github.valdore86.download.azuredatestudio </string>
+    <string>Downloads the latest version of Azure Data Studio for Mac and turns it into a package. This uses the download recipe from: com.github.valdore86.download.azuredatestudio </string>
     <key>Identifier</key>
     <string>com.github.Mac-Seven.pkg.AzureDataStudio</string>
     <key>Input</key>
