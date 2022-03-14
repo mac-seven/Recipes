@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of HighSide and turns it into a package.</string>
+    <string>Downloads the latest version of Cisco Webex for Intel macOS devices and turns it into a package.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.pkg.CCleaner</string>
+    <string>com.github.Mac-Seven.pkg.CiscoWebex-Intel</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>CCleaner</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.Mac-Seven.download.CCleaner</string>
+    <string>com.github.Mac-Seven.download.CiscoWebex-Intel</string>
     <key>Process</key>
     <array>
         <dict>
