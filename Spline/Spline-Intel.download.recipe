@@ -5,13 +5,13 @@
     <key>Description</key>
     <string>This recipe downloadsthe latest version of Spline for Intel devices</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.download.Spline</string>
+    <string>com.github.Mac-Seven.download.Spline-Intel</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Spline</string>
         <key>SEARCH_URL</key>
-        <string>https://spline.design/&num;download</string>
+        <string>https://spline.design/download</string>
         <key>SEARCH_PATTERN</key>
         <string>https://cdn.spline.design/_assets/Spline-[\S]+\-x64.osx_update.zip</string>
     </dict>
