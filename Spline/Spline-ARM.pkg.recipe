@@ -76,7 +76,7 @@
 					<key>pkgdir</key>
 					<string>%RECIPE_CACHE_DIR%</string>
 					<key>pkgname</key>
-					<string>%NAME%_ARM-%version%</string>
+					<string>%NAME%-%version%</string>
 				</dict>
 			</dict>
 		</dict>
