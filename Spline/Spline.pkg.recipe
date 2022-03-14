@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current Apple Enterprise Connect installer, extracts version information and renames the installer package.</string>
 	<key>Identifier</key>
-	<string>com.github.Mac-Seven.pkg.Spline-Intel</string>
+	<string>com.github.Mac-Seven.pkg.Spline</string>
 	<key>Input</key>
 	<dict>
 	</dict>
