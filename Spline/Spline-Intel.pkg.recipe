@@ -13,7 +13,20 @@
 	<string>com.github.Mac-Seven.download.Spline-Intel</string>
 	<key>Process</key>
 	<array>
-		<dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unzip</string>
+                <key>purge_destination</key>
+                <false/>
+            </dict>
+        </dict>
+        <dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 			<key>Arguments</key>
@@ -35,7 +48,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/Spline.app</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/*.app</string>
+				<string>%RECIPE_CACHE_DIR%/unzip/*.app</string>
 			</dict>
 		</dict>
 		<dict>
