@@ -11,6 +11,8 @@
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.Mac-Seven.download.Spline-Intel</string>
+    <key>pkgname</key>
+    <string>%NAME%-%version%</string>
 	<key>Process</key>
 	<array>
         <dict>
@@ -37,6 +39,48 @@
                 <string>CFBundleShortVersionString</string>
             </dict>
         </dict>
-	</array>
+		<dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Users</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+						<dict>
+							<key>group</key>
+							<string>wheel</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>options</key>
+					<string>%RECIPE_CACHE_DIR%</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+				</dict>
+			</dict>
+        </dict>
+
+    </array>
 </dict>
 </plist>
