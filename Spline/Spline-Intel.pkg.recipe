@@ -23,7 +23,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unzip</string>
                 <key>purge_destination</key>
-                <false/>
+                <true/>
             </dict>
         </dict>
         <dict>
