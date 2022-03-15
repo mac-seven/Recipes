@@ -31,7 +31,6 @@
                 </dict>
             </dict>
         </dict>
-
         <dict>
             <key>Processor</key>
             <string>Copier</string>
@@ -45,6 +44,37 @@
                 <string>%RECIPE_CACHE_DIR%/BUILD_%NAME%/Applications/%APPNAME%</string>
             </dict>
         </dict>
+
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_request</key>
+                <dict>
+                    <key>version</key>
+                    <string>%version%</string>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
+                    <key>id</key>
+                    <string>com.azuredatastudio.oss</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
+                    <key>chown</key>
+                    <array>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+
 
     </array>
 </dict>
