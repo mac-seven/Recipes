@@ -30,8 +30,6 @@
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
-
-
         <dict>
             <key>Processor</key>
             <string>PkgExtractor</string>
@@ -43,8 +41,6 @@
                 <string>%RECIPE_CACHE_DIR%/BUILD_%NAME%</string>
             </dict>
         </dict>
-
-
     </array>
 </dict>
 </plist>
