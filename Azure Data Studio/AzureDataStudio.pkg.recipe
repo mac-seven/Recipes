@@ -10,7 +10,7 @@
     <dict>
         <key>NAME</key>
         <string>Azure Data Studio</string>
-        <key>app_name</key>
+        <key>APPNAME</key>
         <string>Azure Data Studio.app</string>
     </dict>
     <key>ParentRecipe</key>
@@ -37,9 +37,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%pathname%/%app_name%</string>
+                <string>%pathname%/%APPNAME%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/%app_name%</string>
+                <string>%pkgroot%/Applications/%APPNAME%</string>
             </dict>
         </dict>
         <dict>
