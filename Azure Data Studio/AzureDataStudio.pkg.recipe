@@ -25,7 +25,7 @@
                 <key>APPNAME</key>
                 <string>Azure Data Studio.app</string>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME&/%APPNAME%</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/%APPNAME%</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/Applications/%APPNAME%</string>
             </dict>
