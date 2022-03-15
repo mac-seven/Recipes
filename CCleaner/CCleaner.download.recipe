@@ -32,16 +32,6 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>AppDmgVersioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>dmg_path</key>
-                <string>%pathname%</string>
-            </dict>
-        </dict>
-
-        <dict>
-            <key>Processor</key>
             <string>PkgExtractor</string>
             <key>Arguments</key>
             <dict>
