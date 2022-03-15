@@ -22,6 +22,8 @@
             <string>PkgRootCreator</string>
             <key>Arguments</key>
             <dict>
+                <key>APPNAME</key>
+                <string>Azure Data Studio.app</string>
                 <key>pkgroot</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%</string>
                 <key>pkgdirs</key>
