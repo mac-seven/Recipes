@@ -10,6 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>Azure Data Studio</string>
+        <key>app_name</key>
+        <string>Azure Data Studio.app</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.Mac-Seven.download.AzureDataStudio</string>
