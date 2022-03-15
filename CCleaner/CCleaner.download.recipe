@@ -39,6 +39,20 @@
                 <string>%pathname%</string>
             </dict>
         </dict>
+
+        <dict>
+            <key>Processor</key>
+            <string>PkgExtractor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>extract_root</key>
+                <string>%RECIPE_CACHE_DIR%</string>
+            </dict>
+        </dict>
+
+
     </array>
 </dict>
 </plist>
