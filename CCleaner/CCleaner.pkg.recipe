@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download recipe for the latest free version of CCleaner.</string>
+    <string>Download recipe to obtain the latest pkg installer for the free version of CCleaner.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.download.CCleaner</string>
+    <string>com.github.Mac-Seven.pkg.CCleaner</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
