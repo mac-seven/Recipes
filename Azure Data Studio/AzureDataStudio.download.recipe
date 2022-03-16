@@ -19,7 +19,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                </string>https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15</string>
+                <string>https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15</string>
                 <key>re_pattern</key>
                 <string>linkid=(\d+)\" data-linktype=\"external\">Azure Data Studio for macOS</string>
             </dict>
