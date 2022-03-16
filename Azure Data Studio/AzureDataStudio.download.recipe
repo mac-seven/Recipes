@@ -17,7 +17,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>(linkid=[0-9\.]+" data-linktype="external">Azure Data Studio for macOS</string>
+				<string>(linkid=[0-9\.]+" data-linktype="external">Azure Data Studio for macOS)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>url</key>
