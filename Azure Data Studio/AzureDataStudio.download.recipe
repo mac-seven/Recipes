@@ -21,7 +21,7 @@
                 <key>url</key>
                 <string>https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15</string>
                 <key>re_pattern</key>
-                <string>linkid=(\d+)" data-linktype="external">Azure Data Studio for macOS</string>
+                <string>https://go.microsoft.com/fwlink/?linkid=2187461</string>
             </dict>
         </dict>
         <dict>
