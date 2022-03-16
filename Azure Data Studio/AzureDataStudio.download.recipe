@@ -14,23 +14,25 @@
 	<key>Process</key>
 	<array>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15</string>
-                <key>re_pattern</key>
-                <string>https://go.microsoft.com/fwlink/?linkid=2187461</string>
-            </dict>
-        </dict>
-        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>(linkid=[0-9\.]+" data-linktype="external">Azure Data Studio for macOS</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+				<key>url</key>
+				<string>https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>azuredatastudio.zip</string>
+				<string>%NAME%.pkg</string>
 				<key>url</key>
-				<string>%result_output_var_name%</string>
+				<string>https://go.microsoft.com/fwlink/?linkid=%url%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
