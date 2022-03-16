@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Azure Data Studio.</string>
 	<key>Identifier</key>
-    <string>com.github.Mac-Seven.download.AzureDataStudio</string>
+    	<string>com.github.Mac-Seven.download.AzureDataStudio</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
