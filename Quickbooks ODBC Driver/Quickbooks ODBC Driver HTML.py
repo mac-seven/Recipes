@@ -1,6 +1,3 @@
-from autopkglib import ProcessorError
-from autopkglib.URLGetter import URLGetter
-
 def main(self):
   # Use curl to download a file to disk.
   # Ideal for zipped or archived files that contain information you need, 
