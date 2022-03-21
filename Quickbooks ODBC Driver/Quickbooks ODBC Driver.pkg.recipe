@@ -31,12 +31,12 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>PkgExtractor</string>
+            <string>PkgCopier</string>
             <key>Arguments</key>
             <dict>
+                <key>source_pkg</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/*.pkg</string>
                 <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/.pkg</string>
-                <key>extract_root</key>
                 <string>%pkgroot%</string>
             </dict>
         </dict>
