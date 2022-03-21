@@ -17,7 +17,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>(https?://[^\s]+)">click here</string>
+				<string><a href="(https:\/\/s3.amazonaws.com\/.+)">click here</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>url</key>
