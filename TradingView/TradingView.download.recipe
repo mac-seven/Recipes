@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Tradingview</string>
+        <string>TradingView</string>
         <key>DOWNLOAD_URL</key>
         <string>https://tvd-packages.tradingview.com/stable/latest/darwin/TradingView.dmg</string>
     </dict>
