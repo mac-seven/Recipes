@@ -21,7 +21,7 @@
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>url</key>
-				<string>http://shorturl.at/gmyO6</string>
+				<string>https://bit.ly/3tqW6oV</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
