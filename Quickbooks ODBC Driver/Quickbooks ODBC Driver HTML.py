@@ -1,22 +1,11 @@
-# -*- coding: utf-8 -*-
-import scrapy
+from autopkglib import ProcessorError
+from autopkglib.URLGetter import URLGetter
 
-
-class ToScrapeCSSSpider(scrapy.Spider):
-    name = "toscrape-css"
-    start_urls = [
-        'http://quotes.toscrape.com/',
-    ]
-
-    def parse(self, response):
-        for quote in response.css("div.quote"):
-            yield {
-                'text': quote.css("span.text::text").extract_first(),
-                'author': quote.css("small.author::text").extract_first(),
-                'tags': quote.css("div.tags > a.tag::text").extract()
-            }
-
-        next_page_url = response.css("li.next > a::attr(href)").extract_first()
-        if next_page_url is not None:
-            yield scrapy.Request(response.urljoin(next_page_url))
-
+def main(self):
+  # Use curl to download a file to disk.
+  # Ideal for zipped or archived files that contain information you need, 
+  # such as versions or URLs of other downloads
+  my_url = self.env["https://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks%20ODBC%20Driver%20for%20Mac&tag=Download-modbc"]
+  filename = os.path.join(self.env["RECIPE_CACHE_DIR"], "downloads", "my_downloaded_filename")
+  self.download_to_file(url, filename)
+  # Now we can do something with the file, such as read it, rename it, store it in an output variable, etc.
