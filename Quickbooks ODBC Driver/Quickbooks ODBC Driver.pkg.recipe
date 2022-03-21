@@ -35,8 +35,6 @@
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%</string>
-                <key>purge_destination</key>
-                </true>
             </dict>
         </dict>
     </array>
