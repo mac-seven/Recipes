@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Quickbooks ODBC Driver.</string>
+	<string>Downloads the current release version of Quickbooks ODBC Driver. This requires the use of an external Python script as the CURLTextSearcher was unable to work with the ampersand in the original download URL. \n Instead a script downloads the html page and then it is referenced locally to get round this issue.</string>
 	<key>Identifier</key>
     	<string>com.github.Mac-Seven.download.QuickbooksODBCDriver</string>
 	<key>Input</key>
