@@ -17,6 +17,21 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
+				<string>Version: ([0-9]+.[0-9]+.[0-9]+)</string>
+				<key>result_output_var_name</key>
+				<string>versionnumber</string>
+				<key>url</key>
+				<string>https://www.cdata.com/drivers/quickbooks/download/odbc/#macos</string>
+                <key>result_output_var_name</key>
+                <string>downloadurl</string>
+			</dict>
+			<key>Processor</key>
+			<string>CURLTextSearcher</string>
+		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
 				<string>(https:\/\/s3.amazonaws.com\/.*.dmg)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
@@ -32,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%-%versionnumber%.dmg</string>
 				<key>url</key>
 				<string>%downloadurl%</string>
 			</dict>
