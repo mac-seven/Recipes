@@ -18,12 +18,10 @@
 			<dict>
 				<key>re_pattern</key>
 				<string>Version: ([0-9]+.[0-9]+.[0-9]+)</string>
-				<key>result_output_var_name</key>
-				<string>VERSIONNUMBER</string>
 				<key>url</key>
-				<string>https://www.cdata.com/drivers/quickbooks/download/odbc/#macos</string>
+				<string>file://%RECIPE_CACHE_DIR%/%NAME%.html</string>
                 <key>result_output_var_name</key>
-                <string>downloadurl</string>
+                <string>versionnumber</string>
 			</dict>
 			<key>Processor</key>
 			<string>CURLTextSearcher</string>
@@ -47,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%VERSIONNUMBER%.dmg</string>
+				<string>%NAME%-%versionnumber%.dmg</string>
 				<key>url</key>
 				<string>%downloadurl%</string>
 			</dict>
