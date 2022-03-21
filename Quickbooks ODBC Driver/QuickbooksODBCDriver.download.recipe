@@ -13,6 +13,19 @@
 	</dict>
 	<key>Process</key>
 	<array>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>(QuickBooksODBCDriverforMac.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+				<key>url</key>
+				<string>https://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks%20ODBC%20Driver%20for%20Mac</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
