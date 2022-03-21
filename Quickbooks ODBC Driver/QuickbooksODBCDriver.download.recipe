@@ -21,7 +21,7 @@
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>url</key>
-				<string>https%3A%2F%2Fwww.cdata.com%2Fdownload%2Fgetfile.aspx%3Ffile%3Ddemo%2FRQDG-M%2Fsetup.dmg%26name%3DQuickBooks%20ODBC%20Driver%20for%20Mac</string>
+				<string>https://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg%26name=QuickBooks%20ODBC%20Driver%20for%20Mac</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
