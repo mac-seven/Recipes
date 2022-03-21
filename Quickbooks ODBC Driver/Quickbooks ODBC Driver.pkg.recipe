@@ -42,12 +42,12 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
+            <string>PkgExtractor</string>
             <key>Arguments</key>
             <dict>
-                <key>flat_pkg_path</key>
+                <key>pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
-                <key>destination_path</key>
+                <key>extract_root</key>
                 <string>%pkgroot%</string>
             </dict>
         </dict>
