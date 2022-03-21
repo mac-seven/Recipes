@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Quickbooks ODBC Driver.</string>
+	<key>Identifier</key>
+    	<string>com.github.Mac-Seven.download.QuickbooksODBCDriver2</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Quickbooks ODBC Driver</string>
+	</dict>
+	<key>Process</key>
+	<array>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>href="(https:\/\/s3.amazonaws.com\/.+)">click here</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+				<key>url</key>
+				<string>https://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&amp;name=QuickBooks%20ODBC%20Driver%20for%20Mac&tag=Download-modbc</string>
+                <key>result_output_var_name</key>
+                <string>downloadurl</string>
+			</dict>
+			<key>Processor</key>
+			<string>CURLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>%downloadurl%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+    </array>
+</dict>
+</plist>
