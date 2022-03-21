@@ -11,9 +11,7 @@
         <key>NAME</key>
         <string>Tradingview</string>
         <key>DOWNLOAD_URL</key>
-        <string>
-https://tvd-packages.tradingview.com/stable/latest/darwin/TradingView.dmg
-</string>
+        <string>https://tvd-packages.tradingview.com/stable/latest/darwin/TradingView.dmg</string>
     </dict>
     <key>Process</key>
     <array>
@@ -31,19 +29,6 @@ https://tvd-packages.tradingview.com/stable/latest/darwin/TradingView.dmg
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/%NAME%.app</string>
-                <key>strict_verification</key>
-                <false/>
-                <key>requirement</key>
-                <string>identifier "com.tradingview.tradingviewapp.desktop" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5ATN337F8Z"</string>
-            </dict>
         </dict>
     </array>
 </dict>
