@@ -19,7 +19,7 @@
 				<key>re_pattern</key>
 				<string>Version: ([0-9]+.[0-9]+.[0-9]+)</string>
 				<key>url</key>
-				<string>file://%RECIPE_CACHE_DIR%/%NAME%.html</string>
+				<string>https://www.cdata.com/drivers/quickbooks/download/odbc/#macos</string>
                 <key>result_output_var_name</key>
                 <string>versionnumber</string>
 			</dict>
