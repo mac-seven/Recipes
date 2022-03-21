@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Quickbooks ODBC Driver.</string>
 	<key>Identifier</key>
-    	<string>com.github.Mac-Seven.download.QuickbooksODBCDriver2</string>
+    	<string>com.github.Mac-Seven.download.QuickbooksODBCDriver</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
