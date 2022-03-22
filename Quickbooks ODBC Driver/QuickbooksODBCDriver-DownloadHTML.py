@@ -11,7 +11,7 @@ class getQuickbooksHTML(Processor):
     output_variables = {}
     description = __doc__
     
-    def getQuickbooksHTML():
+    def main(self):
         url = 'http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks ODBC Driver for Mac'
         url = url.replace(" ", "%20")
 
