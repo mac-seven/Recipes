@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from autopkglib import Processor, ProcessorError
+from autopkglib import URLGetter
 
 __all__ = ["GetQuickbooksHTML"]
 
