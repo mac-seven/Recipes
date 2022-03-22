@@ -1,4 +1,6 @@
-from autopkglib.URLGetter import URLGetter
+import sys
+sys.path.insert(0, '/Library/AutoPkg/autopkglib')
+from URLGetter import URLGetter
 
 __all__ = ["SampleSharedProcessor"]
 
