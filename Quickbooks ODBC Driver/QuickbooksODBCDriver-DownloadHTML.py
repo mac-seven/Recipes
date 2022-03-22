@@ -19,7 +19,6 @@ class SampleSharedProcessor(Processor):
     }
 
     def main(self):
-        // do stuff here
         print("My custom processor!")
 
 
