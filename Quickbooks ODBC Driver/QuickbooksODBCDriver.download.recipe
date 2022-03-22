@@ -17,7 +17,12 @@
 	<array>
         <dict>
             <key>Processor</key>
-            <string>GetQuickbooksHTML</string>
+            <string>SampleSharedProcessor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>shared_processor_input_var</key>
+                <string>test string</string>
+            </dict>
         </dict>
         <dict>
 			<key>Arguments</key>
