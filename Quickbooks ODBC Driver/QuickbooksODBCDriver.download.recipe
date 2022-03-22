@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Quickbooks ODBC Driver</string>
         <key>DLURL</key>
-        <string>http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks%20ODBC%20Driver%20for%20Mac</string>
+        <string>http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg\&name=QuickBooks%20ODBC%20Driver%20for%20Mac</string>
 	</dict>
 	<key>Process</key>
 	<array>
