@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Quickbooks ODBC Driver</string>
+        <key>DLURL</key>
+        <string>http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks%20ODBC%20Driver%20for%20Mac</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -34,7 +36,7 @@
 				<key>result_output_var_name</key>
 				<string>url</string>
 				<key>url</key>
-				<string>file://%RECIPE_CACHE_DIR%/%NAME%.html</string>
+				<string>%DLURL%</string>
                 <key>result_output_var_name</key>
                 <string>downloadurl</string>
 			</dict>
