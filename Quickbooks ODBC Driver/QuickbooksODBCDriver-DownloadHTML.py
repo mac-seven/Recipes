@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-# QuickbooksODBCDriver-DownloadHTML.py
+#!/usr/bin/env python
 
 import urllib.request, urllib.error, urllib.parse
 
