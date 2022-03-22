@@ -12,15 +12,15 @@ class getQuickbooksHTML(Processor):
     description = __doc__
     
     def main(self):
-        url = 'http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks ODBC Driver for Mac'
-        url = url.replace(" ", "%20")
+        self.url = 'http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks ODBC Driver for Mac'
+        self.url = self.url.replace(" ", "%20")
 
-        response = urllib.request.urlopen(url)
-        webContent = response.read().decode('UTF-8')
+        self.response = urllib.request.urlopen(self.url)
+        self.webContent = response.read().decode('UTF-8')
 
-        f = open('Quickbooks ODBC Driver.html', 'w')
-        f.write(webContent)
-        f.close
+        self.f = open('Quickbooks ODBC Driver.html', 'w')
+        self.f.write(webContent)
+        self.f.close
     
 if __name__ == "__main__":
     processor = getQuickbooksHTML()
