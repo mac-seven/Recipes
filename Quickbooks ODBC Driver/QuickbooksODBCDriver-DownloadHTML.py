@@ -1,4 +1,4 @@
-from autopkglib import Processor, ProcessorError
+from autopkglib.URLGetter import URLGetter
 
 __all__ = ["SampleSharedProcessor"]
 
@@ -8,19 +8,17 @@ class SampleSharedProcessor(Processor):
     a shared processor via a recipe repo."""
 
     description = __doc__
-    input_variables = {
-        "shared_processor_input_var": {
-            "required": True,
-            "description": "Test the use of an input variable in a shared processor.",
-        }
-    }
-    output_variables = {
-        "module_file_path": {"description": "Outputs this module's file path."}
-    }
+    input_variables = {}
+    output_variables = {}
 
     def main(self):
-        print("My custom processor!")
-
+        # Use curl to download a file to disk.
+        # Ideal for zipped or archived files that contain information you need, 
+        # such as versions or URLs of other downloads
+        my_url = 'http://www.cdata.com/download/getfile.aspx?file=demo/RQDG-M/setup.dmg&name=QuickBooks%20ODBC%20Driver%20for%20Mac'
+        filename = os.path.join(self.env["RECIPE_CACHE_DIR"], "QuickbooksODBCDriver.html")
+        self.download_to_file(url, filename)
+        # Now we can do something with the file, such as read it, rename it, store it in an output variable, etc.
 
 if __name__ == "__main__":
     PROCESSOR = SampleSharedProcessor()
