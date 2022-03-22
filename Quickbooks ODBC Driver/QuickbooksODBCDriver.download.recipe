@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Quickbooks ODBC Driver. 
-		This requires the use of an external Python script as the CURLTextSearcher was unable to work with the ampersand in the original download URL.
-		Instead a script downloads the html page and then it is referenced locally to get round this issue.</string>
+	<string>Downloads the current release version of Quickbooks ODBC Driver.</string>
 	<key>Identifier</key>
     	<string>com.github.Mac-Seven.download.QuickbooksODBCDriver</string>
 	<key>Input</key>
@@ -15,10 +13,6 @@
 	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>SampleSharedProcessor</string>
-        </dict>
         <dict>
 			<key>Arguments</key>
 			<dict>
@@ -31,6 +25,32 @@
 			</dict>
 			<key>Processor</key>
 			<string>CURLTextSearcher</string>
+		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>(https:\/\/s3.amazonaws.com\/.*.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+				<key>url</key>
+				<string>file://%RECIPE_CACHE_DIR%/%NAME%.html</string>
+                <key>result_output_var_name</key>
+                <string>downloadurl</string>
+			</dict>
+			<key>Processor</key>
+			<string>CURLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%versionnumber%.dmg</string>
+				<key>url</key>
+				<string>%downloadurl%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
