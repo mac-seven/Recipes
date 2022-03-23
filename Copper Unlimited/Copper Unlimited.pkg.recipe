@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Telegram</string>
+        <string>Copper Unlimited</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.Mac-Seven.download.CopperUnlimited</string>
