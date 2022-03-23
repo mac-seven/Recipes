@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of BookWright macOS and turns it into a package.</string>
+    <string>Downloads the latest version of BookWright for macOS and turns it into a package.</string>
     <key>Identifier</key>
     <string>com.github.Mac-Seven.pkg.BookWright</string>
     <key>Input</key>
@@ -15,6 +15,15 @@
     <string>com.github.Mac-Seven.download.BookWright</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>AppDmgVersioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>PkgRootCreator</string>
@@ -29,30 +38,17 @@
                 </dict>
             </dict>
         </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
-				<key>purge_destination</key>
-				<false/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pathname%/%app_name%</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications/%app_name%</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>PkgCreator</string>
@@ -60,12 +56,12 @@
             <dict>
                 <key>pkg_request</key>
                 <dict>
-                    <key>version</key>
-                    <string>%version%</string>
                     <key>pkgname</key>
                     <string>%NAME%-%version%</string>
+                    <key>version</key>
+                    <string>%version%</string>
                     <key>id</key>
-                    <string>com.blurb.bookwright</string>
+                    <string>%bundleid%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
