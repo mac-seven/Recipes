@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of HighSide and turns it into a package.</string>
+    <string>Downloads the latest version of Brave Browser and turns it into a package.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.pkg.HighSide</string>
+    <string>com.github.Mac-Seven.pkg.BraveBrowser</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>HighSide</string>
+        <string>Brave Browser</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.Mac-Seven.download.HighSide</string>
+    <string>com.github.Mac-Seven.download.BraveBrowser</string>
     <key>Process</key>
     <array>
         <dict>
