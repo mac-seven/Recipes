@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Brave Browser_arm</string>
+        <string>Brave Browser</string>
         <key>DOWNLOAD_URL</key>
         <string>https://laptop-updates.brave.com/latest/osxarm64</string>
     </dict>
