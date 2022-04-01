@@ -10,8 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>FileZilla</string>
-        <key>APPNAME</key>
-        <string>FileZilla.app</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.Mac-Seven.download.FileZilla</string>
@@ -34,9 +32,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.tar.bz2</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/</string>
 				<key>purge_destination</key>
 				<false/>
 			</dict>
