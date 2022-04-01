@@ -30,19 +30,19 @@
                 </dict>
             </dict>
         </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
-                <key>purge_destination</key>
-                <false/>
-            </dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.tar.bz2</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<key>purge_destination</key>
+				<false/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
     </array>
 </dict>
 </plist>
