@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Azure Data Studio for Mac and turns it into a package.</string>
+    <string>Downloads the latest version of Filezilla and turns it into a package.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.pkg.AzureDataStudio</string>
+    <string>com.github.Mac-Seven.pkg.FileZilla</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Azure Data Studio</string>
+        <string>FileZilla</string>
         <key>APPNAME</key>
-        <string>Azure Data Studio.app</string>
+        <string>FileZilla.app</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.Mac-Seven.download.AzureDataStudio</string>
+    <string>com.github.Mac-Seven.download.FileZilla</string>
     <key>Process</key>
     <array>
         <dict>
@@ -67,7 +67,7 @@
                     <key>pkgname</key>
                     <string>%NAME%-%version%</string>
                     <key>id</key>
-                    <string>com.azuredatastudio.oss</string>
+                    <string>org.filezilla-project.filezilla</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
