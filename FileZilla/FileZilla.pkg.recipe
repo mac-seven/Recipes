@@ -3,27 +3,20 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of FileZilla for macOS and turns it into a package.</string>
+    <string>Downloads the latest version of Azure Data Studio for Mac and turns it into a package.</string>
     <key>Identifier</key>
-    <string>com.github.Mac-Seven.pkg.FileZilla</string>
+    <string>com.github.Mac-Seven.pkg.AzureDataStudio</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>FileZilla</string>
+        <string>Azure Data Studio</string>
+        <key>APPNAME</key>
+        <string>Azure Data Studio.app</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.Mac-Seven.download.FileZilla</string>
+    <string>com.github.Mac-Seven.download.AzureDataStudio</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>AppDmgVersioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>dmg_path</key>
-                <string>%pathname%</string>
-            </dict>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>PkgRootCreator</string>
@@ -38,17 +31,30 @@
                 </dict>
             </dict>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Copier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source_path</key>
-                <string>%pathname%/%app_name%</string>
-                <key>destination_path</key>
-                <string>%pkgroot%/Applications/%app_name%</string>
-            </dict>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<key>purge_destination</key>
+				<false/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
         <dict>
             <key>Processor</key>
             <string>PkgCreator</string>
@@ -56,12 +62,12 @@
             <dict>
                 <key>pkg_request</key>
                 <dict>
-                    <key>pkgname</key>
-                    <string>%NAME%-%version%</string>
                     <key>version</key>
                     <string>%version%</string>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
                     <key>id</key>
-                    <string>%bundleid%</string>
+                    <string>com.azuredatastudio.oss</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
