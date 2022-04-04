@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Rhinoceros 7 and creates a package.</string>
     <key>Identifier</key>
-    <string>com.github.ahousseini-recipes.pkg.Rhinoceros7</string>
+    <string>com.github.mac-seven.pkg.Rhino7</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
