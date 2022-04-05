@@ -17,11 +17,11 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://updates.signal.org/desktop/signal-desktop-mac-universal-[0-9.]+.dmg</string>
+				<string>version: ([0-9.]+)</string>
 				<key>result_output_var_name</key>
-				<string>URL</string>
+				<string>version</string>
 				<key>url</key>
-				<string>https://signal.org/download/macos/</string>
+				<string>https://updates.signal.org/desktop/latest-mac.yml</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%URL%</string>
+                <string>https://updates.signal.org/desktop/signal-desktop-mac-universal-%version%.dmg</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
