@@ -19,7 +19,7 @@
 				<key>url</key>
 				<string>https://filezilla-project.org/download.php?show_all=1</string>
 				<key>re_pattern</key>
-				<string>https://[a-z0-9]+.cdn.filezilla-project.org/client/FileZilla_[0-9.]+_macosx-x86.[a-z0-9.?=A-Z_]+\&amp;[a-z0-9=]+</string>
+				<string>https://[a-z0-9]+.cdn.filezilla-project.org/client/FileZilla_[0-9.]+_macosx-x86.tar.bz2?[a-zA-Z0-9.=_?-]+\&amp;[a-zA-Z0-9.=_?-]+</string>
 				<key>result_output_var_name</key>
 				<string>url</string>				
 			</dict>
